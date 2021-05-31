@@ -19,6 +19,10 @@ public class Bird : MonoBehaviour {
     protected AguoTrail aguoTrail;
 
     public bool canMove = true;
+    public float smooth = 3;
+
+    public AudioClip select;
+    public AudioClip fly;
 
     private void Awake()
     {
@@ -32,6 +36,7 @@ public class Bird : MonoBehaviour {
     {
         if (canMove)
         {
+            AudioPlay(select);
             isClick = true;
             rg.isKinematic = true;
         }
@@ -67,10 +72,16 @@ public class Bird : MonoBehaviour {
             }
             Line();
         }
+
+        //相机跟随
+        float posX = transform.position.x;
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, new Vector3(Mathf.Clamp(posX, (float)88.88, (float)103.88), Camera.main.transform.position.y,
+            Camera.main.transform.position.z), smooth * Time.deltaTime);
     }
 
     public void Fly()
     {
+        AudioPlay(fly);
         aguoTrail.StartTrails();
         sp.enabled = false;
         Invoke("Next", 5);
@@ -106,5 +117,14 @@ public class Bird : MonoBehaviour {
     {
         
         aguoTrail.ClearTrails();
+    }
+
+    /// <summary>
+    /// 播放音乐的方法
+    /// </summary>
+    /// <param name="clip"></param>
+    public void AudioPlay(AudioClip clip)
+    {
+        AudioSource.PlayClipAtPoint(clip, transform.position);
     }
 }
