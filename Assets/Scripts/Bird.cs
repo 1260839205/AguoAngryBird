@@ -24,6 +24,8 @@ public class Bird : MonoBehaviour {
     public AudioClip select;
     public AudioClip fly;
 
+    private bool isFly = false;
+
     private void Awake()
     {
         sp = GetComponent<SpringJoint2D>();
@@ -50,6 +52,7 @@ public class Bird : MonoBehaviour {
             isClick = false;
             rg.isKinematic = false;
             Invoke("Fly", 0.1f);
+
             //禁用划线组件
             right.enabled = false;
             left.enabled = false;
@@ -77,10 +80,19 @@ public class Bird : MonoBehaviour {
         float posX = transform.position.x;
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, new Vector3(Mathf.Clamp(posX, (float)88.88, (float)103.88), Camera.main.transform.position.y,
             Camera.main.transform.position.z), smooth * Time.deltaTime);
+
+        if (isFly)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                ShowSkill();
+            }
+        }
     }
 
     public void Fly()
     {
+        isFly = true;
         AudioPlay(fly);
         aguoTrail.StartTrails();
         sp.enabled = false;
@@ -115,7 +127,7 @@ public class Bird : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        isFly = false;
         aguoTrail.ClearTrails();
     }
 
@@ -126,5 +138,13 @@ public class Bird : MonoBehaviour {
     public void AudioPlay(AudioClip clip)
     {
         AudioSource.PlayClipAtPoint(clip, transform.position);
+    }
+
+    /// <summary>
+    /// 炫技
+    /// </summary>
+    public virtual void ShowSkill()
+    {
+        isFly = false;
     }
 }

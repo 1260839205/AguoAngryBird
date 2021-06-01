@@ -1791,11 +1791,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4347979353468276, guid: 214882104f59f484493b3984b0eea36d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 78.340004
+      value: 78.11
       objectReference: {fileID: 0}
     - target: {fileID: 4347979353468276, guid: 214882104f59f484493b3984b0eea36d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 36.71
+      value: 36.69
       objectReference: {fileID: 0}
     - target: {fileID: 4347979353468276, guid: 214882104f59f484493b3984b0eea36d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2699,6 +2699,22 @@ Prefab:
       propertyPath: fly
       value: 
       objectReference: {fileID: 8300000, guid: 65774e057815a5e4fa70215e9acad616, type: 3}
+    - target: {fileID: 212171797482804534, guid: 214882104f59f484493b3984b0eea36d,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300152, guid: d54ff33a10ef66e41a2aa0463450d3df,
+        type: 3}
+    - target: {fileID: 58482669354610572, guid: 214882104f59f484493b3984b0eea36d,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.089464575
+      objectReference: {fileID: 0}
+    - target: {fileID: 58482669354610572, guid: 214882104f59f484493b3984b0eea36d,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.28946456
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 214882104f59f484493b3984b0eea36d, type: 2}
   m_IsPrefabAsset: 0
@@ -4278,7 +4294,7 @@ Prefab:
       objectReference: {fileID: 15475666}
     - target: {fileID: 1028267254397716, guid: 214882104f59f484493b3984b0eea36d, type: 2}
       propertyPath: m_Name
-      value: bird (5)
+      value: yellowbird
       objectReference: {fileID: 0}
     - target: {fileID: 114624509074131030, guid: 214882104f59f484493b3984b0eea36d,
         type: 2}
@@ -4301,6 +4317,17 @@ Prefab:
       propertyPath: fly
       value: 
       objectReference: {fileID: 8300000, guid: 65774e057815a5e4fa70215e9acad616, type: 3}
+    - target: {fileID: 212171797482804534, guid: 214882104f59f484493b3984b0eea36d,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300336, guid: d54ff33a10ef66e41a2aa0463450d3df,
+        type: 3}
+    - target: {fileID: 58482669354610572, guid: 214882104f59f484493b3984b0eea36d,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.254
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 214882104f59f484493b3984b0eea36d, type: 2}
   m_IsPrefabAsset: 0
@@ -4337,6 +4364,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4347979353468276, guid: 214882104f59f484493b3984b0eea36d,
     type: 2}
   m_PrefabInternal: {fileID: 1298472524}
+--- !u!114 &1349383573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1349383565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0e496c0f00306458e0c7d8f2d81a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDis: 3
+  sp: {fileID: 0}
+  right: {fileID: 1438795917}
+  rightPos: {fileID: 1186389473}
+  left: {fileID: 1061669469}
+  leftPos: {fileID: 15475666}
+  boom: {fileID: 1077004942695672, guid: b29f0bd42cfbfb94c9b5b8915937650d, type: 2}
+  canMove: 1
+  smooth: 3
+  select: {fileID: 8300000, guid: 3641c9435ad52ea429348437c2742cdb, type: 3}
+  fly: {fileID: 8300000, guid: 65774e057815a5e4fa70215e9acad616, type: 3}
 --- !u!1 &1382507922
 GameObject:
   m_ObjectHideFlags: 0
@@ -5162,7 +5211,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4347979353468276, guid: 214882104f59f484493b3984b0eea36d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 79.11001
+      value: 79.05
       objectReference: {fileID: 0}
     - target: {fileID: 4347979353468276, guid: 214882104f59f484493b3984b0eea36d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5219,7 +5268,7 @@ Prefab:
       objectReference: {fileID: 15475666}
     - target: {fileID: 1028267254397716, guid: 214882104f59f484493b3984b0eea36d, type: 2}
       propertyPath: m_Name
-      value: bird (3)
+      value: greenbird
       objectReference: {fileID: 0}
     - target: {fileID: 114624509074131030, guid: 214882104f59f484493b3984b0eea36d,
         type: 2}
@@ -5242,6 +5291,22 @@ Prefab:
       propertyPath: fly
       value: 
       objectReference: {fileID: 8300000, guid: 65774e057815a5e4fa70215e9acad616, type: 3}
+    - target: {fileID: 212171797482804534, guid: 214882104f59f484493b3984b0eea36d,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300210, guid: d54ff33a10ef66e41a2aa0463450d3df,
+        type: 3}
+    - target: {fileID: 58482669354610572, guid: 214882104f59f484493b3984b0eea36d,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.3790468
+      objectReference: {fileID: 0}
+    - target: {fileID: 58482669354610572, guid: 214882104f59f484493b3984b0eea36d,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.013821244
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 214882104f59f484493b3984b0eea36d, type: 2}
   m_IsPrefabAsset: 0
@@ -5273,6 +5338,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTrail: {fileID: 1532068399}
+--- !u!114 &1660349545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1660349537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d8919298bc2294397d0d9a49e302be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDis: 3
+  sp: {fileID: 0}
+  right: {fileID: 1438795917}
+  rightPos: {fileID: 1186389473}
+  left: {fileID: 1061669469}
+  leftPos: {fileID: 15475666}
+  boom: {fileID: 1077004942695672, guid: b29f0bd42cfbfb94c9b5b8915937650d, type: 2}
+  canMove: 1
+  smooth: 3
+  select: {fileID: 8300000, guid: 3641c9435ad52ea429348437c2742cdb, type: 3}
+  fly: {fileID: 8300000, guid: 65774e057815a5e4fa70215e9acad616, type: 3}
 --- !u!4 &1694612268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4992474289545592, guid: 20f5e078487f0aa4293b58a64d5ee70c,
