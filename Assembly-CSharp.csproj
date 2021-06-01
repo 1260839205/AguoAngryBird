@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Boom.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GreenBird.cs" />
+     <Compile Include="Assets\Scripts\MapSelect.cs" />
      <Compile Include="Assets\Scripts\PausePane.cs" />
      <Compile Include="Assets\Scripts\Pig.cs" />
      <Compile Include="Assets\Scripts\Win.cs" />

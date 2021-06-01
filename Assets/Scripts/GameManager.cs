@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour {
     public GameObject lose;
     public GameObject[] stars;
 
+    private int starsNum = 0;
+
     private void Awake()
     {
         _instance = this;
@@ -77,11 +79,16 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator show()
     {
-        for(int i = 0; i < birds.Count + 1; i++)
+        for (; starsNum < birds.Count + 1; starsNum++)
         {
+            if (starsNum >= stars.Length)
+            {
+                break;
+            }
             yield return new WaitForSeconds(0.2f);
-            stars[i].SetActive(true);
+            stars[starsNum].SetActive(true);
         }
+        print(starsNum);
     }
 
     public void Replay()
