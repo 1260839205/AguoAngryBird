@@ -6,6 +6,7 @@ public class BlackBird : Bird {
 
     public  List<Pig> blocks = new List<Pig>();
 
+    // 进入触发区域
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy") {
@@ -13,6 +14,7 @@ public class BlackBird : Bird {
         }
     }
 
+    // 离开触发区域
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
@@ -20,6 +22,7 @@ public class BlackBird : Bird {
             blocks.Remove(collision.gameObject.GetComponent<Pig>());
         }
     }
+
 
     public override void ShowSkill()
     {
@@ -35,7 +38,10 @@ public class BlackBird : Bird {
     void OnClear() {
         rg.velocity = Vector3.zero;
         Instantiate(boom,transform.position,Quaternion.identity);
+        render.enabled = false;
         GetComponent<CircleCollider2D>().enabled = false;
+        myTrail.ClearTrails();
+             
     }
 
     protected override void Next()

@@ -30,7 +30,9 @@ public class Pig : MonoBehaviour {
         {
             AudioPlay(birdCollision);
         }
-        if (collision.relativeVelocity.magnitude > maxSpeed)//直接死亡
+
+        //直接死亡
+        if (collision.relativeVelocity.magnitude > maxSpeed)
         {
             Dead();
         }

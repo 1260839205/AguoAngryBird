@@ -56,6 +56,7 @@ public class AguoTrail : MonoBehaviour {
 
         myTrail.StartTrail(0.5f, 0.4f);
     }
+
     /// <summary>
     /// //清除拖尾
     /// </summary>

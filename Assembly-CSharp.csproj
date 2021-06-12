@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\LoadLevelAsync.cs" />
      <Compile Include="Assets\Scripts\MapSelect.cs" />
      <Compile Include="Assets\Scripts\PausePane.cs" />
+     <Compile Include="Assets\Scripts\PausePanel.cs" />
      <Compile Include="Assets\Scripts\Pig.cs" />
      <Compile Include="Assets\Scripts\Win.cs" />
      <Compile Include="Assets\Scripts\YellowBird.cs" />

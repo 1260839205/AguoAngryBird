@@ -21,11 +21,8 @@ public class MapSelect : MonoBehaviour {
 
     private void Start()
     {
-
         if (PlayerPrefs.GetInt("totalNum", 0) >= starsNum) {
-
             isSelect = true;
-
         }
 
         if (isSelect) {
@@ -40,6 +37,8 @@ public class MapSelect : MonoBehaviour {
         }
     }
 
+
+    // 鼠标点击
     public void Selected()
     {
         if (isSelect) {

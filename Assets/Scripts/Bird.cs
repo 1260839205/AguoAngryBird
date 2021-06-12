@@ -99,9 +99,7 @@ public class Bird : MonoBehaviour {
         Invoke("Next", 5);
     }
 
-    /// <summary>
-    /// 划线
-    /// </summary>
+    // 划线
     void Line()
     {
         right.enabled = true;
@@ -113,10 +111,7 @@ public class Bird : MonoBehaviour {
         left.SetPosition(1, transform.position);
     }
 
-    /// <summary>
-    /// 下一只小鸟的飞出
-    /// </summary>
-    /// 
+    // 下一只小鸟的飞出
     protected virtual void Next()
     {
         GameManager._instance.birds.Remove(this);
@@ -131,18 +126,13 @@ public class Bird : MonoBehaviour {
         aguoTrail.ClearTrails();
     }
 
-    /// <summary>
-    /// 播放音乐的方法
-    /// </summary>
-    /// <param name="clip"></param>
+    // 播放音乐的方法
     public void AudioPlay(AudioClip clip)
     {
         AudioSource.PlayClipAtPoint(clip, transform.position);
     }
 
-    /// <summary>
-    /// 炫技
-    /// </summary>
+    // 炫技
     public virtual void ShowSkill()
     {
         isFly = false;
