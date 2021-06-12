@@ -9,5 +9,4 @@ public class YellowBird : Bird {
         base.ShowSkill();
         rg.velocity *= 2;
     }
-
 }

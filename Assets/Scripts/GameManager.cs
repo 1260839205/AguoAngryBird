@@ -93,13 +93,18 @@ public class GameManager : MonoBehaviour {
 
     public void Replay()
     {
-        //SaveData();
+        SaveData();
         SceneManager.LoadScene(2);
     }
 
     public void Home()
     {
-        //SaveData();
+        SaveData();
         SceneManager.LoadScene(1);
+    }
+
+    public void SaveData()
+    {
+         PlayerPrefs.SetInt(PlayerPrefs.GetString("nowLevel"), starsNum);
     }
 }
